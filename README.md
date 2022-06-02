@@ -4,14 +4,15 @@ We a five day weather forecasting application built using ReactJS as part of the
 
 # Learning Objectives
 
-*React
-*JSX
-*Props
-*Props validation
-*State
-*Stateful components
-*Stateless (presentational) components
-*React Hooks
-*React Testing Library
-*Request/Response
-\*Error Handling
+- React
+- JSX
+- Props
+- Props validation
+- State
+- Stateful components
+- Stateless (presentational) components
+- React Hooks
+- React Testing Library
+- Request/Response
+
+* Error Handling
