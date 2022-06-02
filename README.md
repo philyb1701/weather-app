@@ -14,5 +14,6 @@ We a five day weather forecasting application built using ReactJS as part of the
 - React Hooks
 - React Testing Library
 - Request/Response
+- Error Handling
 
-* Error Handling
+#
