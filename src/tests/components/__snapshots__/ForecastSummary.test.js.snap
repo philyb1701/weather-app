@@ -7,21 +7,25 @@ exports[`ForecastSummary renders data correctly 1`] = `
   >
     <div
       class="forecast-summary__date"
+      data-testid="forecast-summary"
     >
       11111111
     </div>
     <div
       class="forecast-summary__icon"
+      data-testid="forecast-icon"
     >
       stubIcon
     </div>
     <div
       class="forecast-summary__temp"
+      data-testid="forecast-temp"
     >
       22°C
     </div>
     <div
       class="forecast-summary__desc"
+      data-testid="forecast-desc"
     >
       Stub description
     </div>

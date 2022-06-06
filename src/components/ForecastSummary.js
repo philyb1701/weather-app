@@ -5,10 +5,18 @@ function ForecastSummary(props) {
   const { date, temperature, description, icon } = props;
   return (
     <div className="forecast-summary">
-      <div className="forecast-summary__date">{date}</div>
-      <div className="forecast-summary__icon">{icon}</div>
-      <div className="forecast-summary__temp">{temperature.max}&deg;C</div>
-      <div className="forecast-summary__desc">{description}</div>
+      <div className="forecast-summary__date" data-testid="forecast-summary">
+        {date}
+      </div>
+      <div className="forecast-summary__icon" data-testid="forecast-icon">
+        {icon}
+      </div>
+      <div className="forecast-summary__temp" data-testid="forecast-temp">
+        {temperature.max}&deg;C
+      </div>
+      <div className="forecast-summary__desc" data-testid="forecast-desc">
+        {description}
+      </div>
     </div>
   );
 }
