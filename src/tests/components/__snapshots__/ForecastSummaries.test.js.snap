@@ -1,0 +1,66 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ForecastSummaries renders correctly 1`] = `
+<DocumentFragment>
+  <div
+    class="forecast-summaries"
+  >
+    <div
+      class="forecast-summary"
+    >
+      <div
+        class="forecast-summary__date"
+        data-testid="forecast-summary"
+      >
+        11111111
+      </div>
+      <div
+        class="forecast-summary__icon"
+        data-testid="forecast-icon"
+      >
+        stubIcon1
+      </div>
+      <div
+        class="forecast-summary__temp"
+        data-testid="forecast-temp"
+      >
+        22°C
+      </div>
+      <div
+        class="forecast-summary__desc"
+        data-testid="forecast-desc"
+      >
+        Stub description 1
+      </div>
+    </div>
+    <div
+      class="forecast-summary"
+    >
+      <div
+        class="forecast-summary__date"
+        data-testid="forecast-summary"
+      >
+        2222222
+      </div>
+      <div
+        class="forecast-summary__icon"
+        data-testid="forecast-icon"
+      >
+        stubIcon2
+      </div>
+      <div
+        class="forecast-summary__temp"
+        data-testid="forecast-temp"
+      >
+        24°C
+      </div>
+      <div
+        class="forecast-summary__desc"
+        data-testid="forecast-desc"
+      >
+        Stub description2
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
