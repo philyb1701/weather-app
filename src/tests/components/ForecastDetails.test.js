@@ -9,9 +9,9 @@ describe("ForecastDetails", () => {
       max: 22,
       min: 12,
     },
-    humidity: 6,
+    humidity: 60,
     wind: {
-      direction: "new",
+      direction: "NE",
       speed: 10,
     },
     onForecastSelect() {
@@ -20,7 +20,7 @@ describe("ForecastDetails", () => {
   };
 
   describe("ForecastDetails-snapshot", () => {
-    it("renders the 4 propss correctly", () => {
+    it("renders props correctly", () => {
       const { asFragment } = render(<ForecastDetails forecast={validProps} />);
       expect(asFragment()).toMatchSnapshot();
     });
@@ -32,17 +32,29 @@ describe("ForecastDetails", () => {
       "class",
       "forecast-details__date"
     );
-    expect(getByText("Max Temperature: 22°C")).toHaveAttribute(
+    expect(getByText("Max: 22°C")).toHaveAttribute(
       "Class",
-      "forecast-details__temp"
+      "forecast-details__max-temp"
     );
-    expect(getByText("Min Temperature: 12°C")).toHaveAttribute(
+    expect(getByText("Min: 12°C")).toHaveAttribute(
       "Class",
-      "forecast-details__temp"
+      "forecast-details__min-temp"
     );
-    expect(getByText("Humidity: 80%")).toHaveAttribute(
+    expect(getByText("Humidity: 60%")).toHaveAttribute(
       "Class",
       "forecast-details__humidity"
+    );
+    expect(getByText("Wind: 10mph")).toHaveAttribute(
+      "Class",
+      "forecast-details__wind"
+    );
+    expect(getByText("Wind: 10mph")).toHaveAttribute(
+      "Class",
+      "forecast-details__wind"
+    );
+    expect(getByText("Direction: NE")).toHaveAttribute(
+      "Class",
+      "forecast-details__direction"
     );
   });
 });

@@ -11,9 +11,9 @@ function ForecastDetails({ forecast }) {
         {formattedDate}
       </div>
       <div className="forecast-details__max-temp" data-testid="forecast-temp">
-        High: {temperature.max}&deg;C
+        Max: {temperature.max}&deg;C
       </div>
-      <div className="forecast-details__max-temp" data-testid="forecast-temp">
+      <div className="forecast-details__min-temp" data-testid="forecast-temp">
         Min: {temperature.min}&deg;C
       </div>
       <div

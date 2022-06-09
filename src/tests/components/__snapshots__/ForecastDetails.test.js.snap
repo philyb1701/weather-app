@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ForecastDetails ForecastDetails-snapshot renders props correctly 1`] = `
+<DocumentFragment>
+  <div
+    class="forecast-details"
+  >
+    <div
+      class="forecast-details__date"
+      data-testid="forecast-details"
+    >
+      Thu Jan 01 1970
+    </div>
+    <div
+      class="forecast-details__max-temp"
+      data-testid="forecast-temp"
+    >
+      Max: 22°C
+    </div>
+    <div
+      class="forecast-details__min-temp"
+      data-testid="forecast-temp"
+    >
+      Min: 12°C
+    </div>
+    <div
+      class="forecast-details__humidity"
+      data-testid="forecast-humidity"
+    >
+      Humidity: 60%
+    </div>
+    <div
+      class="forecast-details__wind"
+      data-testid="forecast-wind"
+    >
+      Wind: 10mph
+    </div>
+    <div
+      class="forecast-details__direction"
+      data-testid="forecast-direction"
+    >
+      Direction: NE
+    </div>
+  </div>
+</DocumentFragment>
+`;
