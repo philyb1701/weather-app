@@ -18,7 +18,7 @@ function ForecastDetails({ forecast }) {
       </div>
       <div
         className="forecast-details__humidity"
-        data-testid="forecast-details__humidity"
+        data-testid="forecast-humidity"
       >
         Humidity: {humidity}%
       </div>
