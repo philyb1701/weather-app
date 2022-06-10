@@ -19,7 +19,12 @@ function App({ location, forecasts }) {
   return (
     <div className="weather-app">
       <LocationDetails city={location.city} country={location.country} />
-      <ForecastSummaries forecasts={forecasts} />
+      <ForecastSummaries
+        forecasts={forecasts}
+        // JSX error? Ask about it.
+        // eslint-disable-next-line react/jsx-no-bind
+        onForecastSelect={handleForecastSelect}
+      />
       <ForecastDetails forecast={selectedForecast} />
     </div>
   );
