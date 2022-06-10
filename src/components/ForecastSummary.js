@@ -21,6 +21,7 @@ function ForecastSummary(props) {
       <div className="forecast-summary__desc" data-testid="forecast-desc">
         {description}
       </div>
+      <button type="button">More details</button>
     </div>
   );
 }
