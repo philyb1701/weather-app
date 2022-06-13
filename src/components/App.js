@@ -1,51 +1,48 @@
-import React, { useState } from "react";
-import PropTypes from "prop-types";
+import React, { useEffect, useState } from "react";
+import axios from "axios";
 import LocationDetails from "./LocationDetails";
 import ForecastSummaries from "./ForecastSummaries";
 import ForecastDetails from "./ForecastDetails";
 
 import "../styles/App.css";
 
-function App({ location, forecasts }) {
-  const [selectedDate, setSelectedDate] = useState(forecasts[0].date);
+function App() {
+  const [forecasts, setForecasts] = useState([]);
+  const [location, setLocation] = useState({ city: "", country: "" });
+  const [selectedDate, setSelectedDate] = useState(0);
+
   const selectedForecast = forecasts.find(
     (forecast) => forecast.date === selectedDate
   );
 
-  function handleForecastSelect(date) {
+  const getForecast = () => {
+    const endpoint = "https://mcr-codes-weather-app.herokuapp.com/forecast";
+
+    axios.get(endpoint).then((response) => {
+      setSelectedDate(response.data.forecasts[0].date);
+      setForecasts(response.data.forecasts);
+      setLocation(response.data.location);
+    });
+  };
+
+  useEffect(() => {
+    getForecast();
+  }, []);
+
+  const handleForecastSelect = (date) => {
     setSelectedDate(date);
-  }
+  };
 
   return (
     <div className="weather-app">
       <LocationDetails city={location.city} country={location.country} />
       <ForecastSummaries
         forecasts={forecasts}
-        // JSX error? Ask about it.
-        // eslint-disable-next-line react/jsx-no-bind
         onForecastSelect={handleForecastSelect}
       />
-      <ForecastDetails forecast={selectedForecast} />
+      {selectedForecast && <ForecastDetails forecast={selectedForecast} />}
     </div>
   );
 }
-
-App.propTypes = {
-  forecasts: PropTypes.arrayOf(
-    PropTypes.shape({
-      date: PropTypes.number,
-      description: PropTypes.string,
-      icon: PropTypes.string,
-      temperature: PropTypes.shape({
-        max: PropTypes.number,
-        min: PropTypes.number,
-      }),
-    })
-  ).isRequired,
-  location: PropTypes.shape({
-    city: PropTypes.string,
-    country: PropTypes.string,
-  }).isRequired,
-};
 
 export default App;
