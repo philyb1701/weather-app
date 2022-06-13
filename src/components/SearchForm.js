@@ -1,0 +1,14 @@
+import React from "react";
+
+function SearchForm() {
+  const handleInputChange = (event) => console.log(event.target.value);
+
+  return (
+    <div className="search-form">
+      <input type="text" onChange={handleInputChange} />
+      <button type="submit">Search</button>
+    </div>
+  );
+}
+
+export default SearchForm;
